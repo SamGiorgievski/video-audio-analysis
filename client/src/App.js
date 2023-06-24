@@ -18,6 +18,13 @@ function App() {
           <h3> Video 1</h3>
           </div>
         
+          <div className="videoboxes">
+          <h3> Video 2</h3>
+          </div>
+
+          <div className="videoboxes">
+          <h3> Video 2</h3>
+          </div>
 
       </div>
     </div>
