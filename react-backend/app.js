@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+const fs = require('fs');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -8,6 +9,12 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// video
+
+app.get('/video', (req, res) => {
+  res.sendFile('assets/sample.mp4', { root: __dirname });
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -39,3 +46,7 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+app.listen(4000, () => {
+  console.log('Listening on port 4000!')
+});
