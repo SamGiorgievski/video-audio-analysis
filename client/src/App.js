@@ -16,6 +16,15 @@ function App() {
       <div className="video">
         <div className="videoboxes">
           <h3> Video 1</h3>
+
+          <div className="App">
+            <header className="App-header">
+            <video controls muted>
+                <source src="http://localhost:4000/video" type="video/mp4"></source>
+            </video>
+            </header>
+          </div>
+
           </div>
         
           <div className="videoboxes">
