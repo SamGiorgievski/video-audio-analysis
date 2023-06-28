@@ -17,7 +17,7 @@ function App() {
         <div className="videoboxes">
           <h3> Video 1</h3>
 
-          <div className="App">
+          <div className="videoplayer1">
             <header className="App-header">
             <video controls muted>
                 <source src="http://localhost:4000/video" type="video/mp4"></source>
