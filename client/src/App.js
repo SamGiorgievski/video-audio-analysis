@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from "react";
+import { AppBar, Toolbar, Typography } from '@mui/material';
 
 function App() {
 
@@ -12,7 +13,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title"> Video Analyzer</h1>
+      <AppBar 
+      position="static">
+        <Toolbar>
+          <Typography 
+          variant="h6" 
+          component="div" 
+          sx={{ flexGrow: 1 }}>
+          Video Analyzer
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <div className="video">
         <div className="videoboxes">
           <h3> Video 1</h3>
