@@ -1,7 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from "react";
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { Box, AppBar, Toolbar, Typography } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 function App() {
 
@@ -12,9 +20,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
       <AppBar 
-      position="static">
+      position="static"
+      sx={{
+        marginBottom: "30px"
+      }}
+      >
         <Toolbar>
           <Typography 
           variant="h6" 
@@ -24,6 +37,7 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
+
       <div className="video">
         <div className="videoboxes">
           <h3> Video 1</h3>
@@ -37,17 +51,9 @@ function App() {
           </div>
 
           </div>
-        
-          <div className="videoboxes">
-          <h3> Video 2</h3>
-          </div>
-
-          <div className="videoboxes">
-          <h3> Video 2</h3>
-          </div>
-
       </div>
-    </div>
+      
+    </ThemeProvider>
   );
 }
 

@@ -1,25 +1,5 @@
-.App {
-  text-align: center;
-}
-
-.title {
-  color:brown;
-}
-
 .video {
   margin: auto;
   width: 75%;
   text-align: center;
-}
-
-.videoboxes {
-  text-align: center;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-color: black;
-  border-style: solid;
-  border-width: 2px;
-  margin-bottom: 10px;
 }
